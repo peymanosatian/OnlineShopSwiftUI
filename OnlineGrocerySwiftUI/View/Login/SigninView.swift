@@ -49,9 +49,36 @@ struct SigninView: View {
                         TextField("Enter You Number", text:$txtMobile )
                             .frame(minWidth: 0 , maxWidth: .infinity)
                         }
+                    NavigationLink{
+                        LoginView()
+                    } label : {
+                        Text("Continue with Email Sign In ")
+                            .font(.customfont(.semibold, fontSize: 18))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity , minHeight: 60, maxHeight: 60)
+                    .background(Color(hex: "5383EC"))
+                    .cornerRadius(22)
+                    .padding(.bottom , 8)
+                    
+                    NavigationLink{
+                        SignUpView()
+                    } label : {
+                        Text("Continue with Email Sign Up ")
+                            .font(.customfont(.semibold, fontSize: 18))
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity , minHeight: 60, maxHeight: 60)
+                    .background(Color.green)
+                    .cornerRadius(22)
+                    .padding(.bottom , 8)
+                    
+                    
                     Divider()
                         .padding(.bottom , 24)
-                    Text("Or connect with social media")
+                    Text("Or connect with Social Media  ")
                         .font(.customfont(.semibold, fontSize: 14))
                         .foregroundColor(.textTitle)
                         .multilineTextAlignment(.center)
@@ -96,7 +123,7 @@ struct SigninView: View {
                 
                 .padding(.horizontal, 20)
                 .frame(width: .screenWidth, alignment: .leading)
-                .padding(.top, .topInsets +  .screenWidth )
+                .padding(.top, .topInsets +  .screenWidth * 0.65)
                
                 
                 
